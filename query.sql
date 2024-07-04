@@ -1,9 +1,10 @@
 StepSQLCode
+``` sql  
 UPDATE G11 
 INNER JOIN TreeList ON G11.[TreeSpecies] = TreeList.scientificName 
 SET G11.treeName = TreeList.[englishName]
 WHERE G11.[TreeSpecies]=TreeList.[scientificName];
-
+```
 INSERT INTO FlagTable (globalID, flag_initial)
 SELECT globalID, uflag
 FROM G11
